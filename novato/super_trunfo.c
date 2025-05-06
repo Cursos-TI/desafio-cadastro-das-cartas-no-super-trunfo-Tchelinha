@@ -31,19 +31,19 @@ int main() {
     // Leitura dos dados da carta 1
     printf("=== Cadastro da Carta 1 ===\n");
     printf("Estado (letra de A a H): ");
-    scanf(" %c", &estado1); // espaço antes do %c para evitar problemas com o enter
-    printf("Código da Carta (ex: A01): ");
-    scanf("%s", codigo1);
-    printf("Nome da Cidade: ");
-    scanf(" %[^\n]", nome1); // lê até a quebra de linha
-    printf("População: ");
-    scanf("%d", &populacao1);
-    printf("Área (em km²): ");
-    scanf("%f", &area1);
-    printf("PIB (em bilhões de reais): ");
-    scanf("%f", &pib1);
-    printf("Número de Pontos Turísticos: ");
-    scanf("%d", &pontos_turisticos1);
+    scanf( " %c", &estado1); // espaço antes do %c para evitar problemas com o enter
+    printf( "Código da Carta (ex: A01): ");
+    scanf( "%s", codigo1);
+    printf( "Nome da Cidade: ");
+    scanf( " %[^\n]", nome1); // lê até a quebra de linha
+    printf( "População: ");
+    scanf( "%d", &populacao1);
+    printf( "Área (em km²): ");
+    scanf( "%f", &area1);
+    printf( "PIB (em bilhões de reais): ");
+    scanf( "%f", &pib1);
+    printf( "Número de Pontos Turísticos: ");
+    scanf( "%d", &pontos_turisticos1);
 
     // Leitura dos dados da Carta 2
     printf("\n=== Cadastro da Carta 2 ===\n");
