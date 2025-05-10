@@ -13,7 +13,6 @@ int main()
     int pontosTuristicos1;
     float densidadePopulacional1;
     float pibPerCapita1;
-    float superPoder1;
     
     // Declaração variáveis carta
 
