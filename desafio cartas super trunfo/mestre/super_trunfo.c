@@ -26,6 +26,9 @@ int main()
     int pontosTuristicos2;
     float densidadePopulacional2;
     float pibPerCapita2;
+    float superPoder2; 
+
+    int comparacao;
 
     //Leitura dos dados da carta 1
 
@@ -53,9 +56,11 @@ int main()
     densidadePopulacional1 = populacao1 / area1;
     pibPerCapita1 = pib1 / populacao1;
 
- 
+   // Calculo SuperPoder1
 
+   superPoder1 = populacao1 + area1 + pib1 + pibPerCapita1 + 1 / densidadePopulacional1 + pontosTuristicos1 ;
 
+  
     //Leitura dos dados da carta 2
 
     printf ("\n # Carta 2\n\n");
@@ -74,38 +79,63 @@ int main()
     printf ("Pontos Turisticos: ");
     scanf ( "%d", &pontosTuristicos2);
 
-   // calculo 2
+    // calculo 2
 
-   densidadePopulacional2 = populacao2 / area2;
-   pibPerCapita2 = pib2 / populacao2;
+    densidadePopulacional2 = populacao2 / area2;
+    pibPerCapita2 = pib2 / populacao2;
    
 
-   // Exibição carta 1
+    // Calculo SuperPoder2
 
-   printf ("\n\n=== Carta 1 ===\n\n");
-   printf ("Estado: %c\n", estado1);
-   printf ("Código: %s\n", codigo1);
-   printf ("Nome da Cidade: %s\n", nomeCidade1);
-   printf ("População: %d\n", populacao1);
-   printf ("Área: %.2f km²\n", area1);
-   printf ("PIB: %.2f Bilhões de reais\n", pib1);
-   printf ("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
-   printf ("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
-   printf ("PIB Per Capita: %.2f Reais", pibPerCapita1);
+    superPoder2 = populacao2 + area2 + pib2 + pibPerCapita2 + 1 / densidadePopulacional2 + pontosTuristicos2;
+
+    // Exibição carta 1
+
+    printf ("\n\n=== Carta 1 ===\n\n");
+    printf ("Estado: %c\n", estado1);
+    printf ("Código: %s\n", codigo1);
+    printf ("Nome da Cidade: %s\n", nomeCidade1);
+    printf ("População: %d\n", populacao1);
+    printf ("Área: %.2f km²\n", area1);
+    printf ("PIB: %.2f Bilhões de reais\n", pib1);
+    printf ("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf ("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf ("PIB Per Capita: %.2f Reais", pibPerCapita1);
 
    // Exibição Carta 2
 
-   printf ("\n\n=== Carta 2 ===\n\n");
-   printf ("Estado: %c\n", estado2);
-   printf ("Código: %s\n", codigo2);
-   printf ("Nome da Cidade: %s\n", nomeCidade2);
-   printf ("População: %d\n", populacao2);
-   printf ("Área: %.2f km²\n", area2);
-   printf ("PIB: %.2f Bilhões de reais\n", pib2);
-   printf ("Números de Pontos Turísticos: %d\n", pontosTuristicos2);
-   printf ("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
-   printf ("PIB Per Capita: %.2f Reais\n\n\n", pibPerCapita2);
+    printf ("\n\n=== Carta 2 ===\n\n");
+    printf ("Estado: %c\n", estado2);
+    printf ("Código: %s\n", codigo2);
+    printf ("Nome da Cidade: %s\n", nomeCidade2);
+    printf ("População: %d\n", populacao2);
+    printf ("Área: %.2f km²\n", area2);
+    printf ("PIB: %.2f Bilhões de reais\n", pib2);
+    printf ("Números de Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf ("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf ("PIB Per Capita: %.2f Reais\n\n\n", pibPerCapita2);
 
-   return 0;
+
+    // Comparação Simples
+
+    printf ("=== Comparação de Cartas ===\n");
+    comparacao = populacao1 > populacao2;
+    printf ("População: %s venceu (%d)\n", comparacao ? "carta 1" : "carta 2", comparacao);
+    comparacao = area1 > area2;
+    printf ("Área: %s venceu (%d)\n", comparacao ? "carta 1" : "carta 2", comparacao);
+    comparacao = pib1 > pib2;
+    printf ("PIB: %s venceu (%d)\n", comparacao ? "carta 1" : "carta 2", comparacao);   
+    comparacao = pontosTuristicos1 > pontosTuristicos2;
+    printf ("Pontos Turísticos: %s (%d)\n", comparacao ? "carta 1" : "carta 2", comparacao);
+    comparacao = densidadePopulacional1 < densidadePopulacional2;
+    printf ("Densidade Populacional: %s (%d)\n", comparacao ? "carta 1" : "carta 2", comparacao);
+    comparacao = pibPerCapita1 > pibPerCapita2;
+    printf ("PIB per Capita: %s (%d)\n", comparacao ? "carta 1" : "carta 2", comparacao);
+    comparacao = superPoder1 > superPoder2;
+    printf ("Super Poder: %s (%d)", comparacao ? "carta 1" : "carta 2", comparacao);
+    
+    return 0;
 
 }
+
+
